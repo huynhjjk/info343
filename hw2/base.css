@@ -1,0 +1,52 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+nav {
+	font-weight: bold;
+	height: 60px;
+	background-color:#00008B;
+}
+
+nav div a {
+	padding: 20px 0;
+	display: block;
+	width:220px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#00008B;
+	text-align:center;
+	text-decoration:none;
+	float: left;
+}
+
+nav ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+nav li {
+	float:right;
+}
+
+nav ul li a:link, nav ul li a:visited {
+	padding: 20px 0;
+	display:block;
+	width:80px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#00008B;
+	text-align:center;
+	text-decoration:none;
+}
+
+nav ul li a:hover, nav ul li a:active {
+	background-color:#0000FF;
+}
+
+img {
+	width: 100%;
+}
