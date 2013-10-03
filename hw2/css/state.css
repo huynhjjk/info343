@@ -1,0 +1,11 @@
+#active {
+	background-color: #0000FF;
+}
+
+input[type="email"]:valid {
+	color: #008000;
+}
+
+input[type="email"]:invalid {
+	color: #FF0000;
+}
