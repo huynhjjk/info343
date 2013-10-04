@@ -1,4 +1,4 @@
-body,div,dl,dt,dd,ul,ol,li,pre,form,fieldset,input,textarea,blockquote,th,td { 
+body,div,dl,dt,dd,ul,ol,li,pre,form,fieldset,input, p, textarea,blockquote,th,td { 
 	margin:0;
 	padding:0;
 }
@@ -6,8 +6,8 @@ table {
 	border-collapse:collapse;
 	border-spacing:0;
 }
-fieldset,img { 
-	border:0;
+img { 
+	width: 100%;
 }
 address,caption,cite,code,dfn,em,strong,th,var {
 	font-style:normal;
@@ -29,28 +29,4 @@ a {
 	text-decoration: none;
 	display: inline-block;
 	text-align: center;
-}
-nav a {
-	padding: 15px;
-}
-nav, footer {
-	font-weight: bold;
-	height: 50px;
-	background-color:#00008B;
-}
-nav ul {
-	float: right;
-}
-nav ul li {
-	display: inline-block;
-}
-nav ul li a{
-	-webkit-transition: 0.5s all;
-	-moz-transition: 0.5s all;
-	-ms-transition: 0.5s all;
-	-o-transition: 0.5s all;
-	transition: 0.5s all;
-}
-nav ul li a:hover{
-	background-color:#0000FF;
 }
