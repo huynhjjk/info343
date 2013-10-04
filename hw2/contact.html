@@ -10,42 +10,46 @@
         <link href="css/module.css" rel="stylesheet">
         <link href="css/state.css" rel="stylesheet">
     </head>
-    <body>    
-		<nav>
-			<div class="container">
-				<div id="logo"><a href="home.html">Express Tires &amp; Auto Service</a></div>
+    <body>
+    	<nav>    
+    		<div id="navbar">
+	            <div id="logo"><a href="home.html">Express Tires &amp; Auto Service</a></div>
 				<ul>
-					<li><a href="#" id="active">Contact</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="warranty.html">Warranty</a></li>
-					<li><a href="services.html">Services</a></li>
 					<li><a href="home.html">Home</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="warranty.html">Warranty</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a id="is-a-active" href="#">Contact</a></li>
 				</ul>
 			</div>
 		</nav>
-		<div class="container">
-	        <div class="main-2-col">
-	        	<form>
-	        		<h1>Contact Us</h1>
-	        		<p>Name</p>
-	        		<input type="text" name="name" placeholder="Full name">
-	        		<p>Email</p>
-	        		<input type="email" name="email" placeholder="Email address">
-	        		<p>Message</p>
-					<textarea rows="4" cols="50">
-					</textarea><br>
-					<a href="#"><button class="buttons" type="button">Submit</button></a>					
-	        	</form>
+		<div id="content">
+			<div class="l-flipped">		
+				<div id="article">
+			    	<div id="header">
+				    	<h1>Contact Us</h1>
+					</div>
+			    	<form>
+			    		<h4>Name</h4>
+			    		<input type="text" name="name" placeholder="Full name">
+			    		<h4>Email</h4>
+			    		<input type="email" name="email" placeholder="Email address">
+			    		<h4>Message</h4>
+						<textarea rows="4" cols="50">
+						</textarea><br>
+						<a href="#"><button class="button" type="button">Submit</button></a>
+			    	</form>
+				</div>
+				<div id="sidebar" class="l-flipped">
+			    	<img src="images/expresstires2.jpg" alt="Express Tires 2">
+				</div>
 			</div>
-	        <div class="main-2-col">
-	        	<img src="images/expresstires2.jpg" alt="Express Tires 2">
-			</div>
-    	</div>
-    	<div class="clear"></div>
-		<div class="footer">
-			<div class="container">
+		</div>
+		<div id="clear"></div>
+		<footer>
+			<div id="footer">
 				<p>Copyright &copy; 2013 Johnson Huynh</p>
-			</div>				
-		</div>    	
+			</div>
+		</footer>
     </body>
 </html>
