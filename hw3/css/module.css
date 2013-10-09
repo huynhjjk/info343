@@ -1,0 +1,29 @@
+.clear {
+    clear: both;
+}
+
+.logo {
+	text-align: center;
+	float: left;
+	display: block;
+}
+
+.features ul {
+	padding-left: 50px;
+	text-align: left;
+}
+
+.thumbnail {
+	padding: 20px;
+	float: left;
+}
+
+.button {
+	padding:10px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	background-color:#00008B;
+	border: 1px solid #666;
+	color:#ffffff;
+	text-decoration:none;	
+}
