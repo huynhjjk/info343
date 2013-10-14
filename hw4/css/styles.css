@@ -29,6 +29,9 @@ ul {
 	padding:10px;
 	text-transform:uppercase;
 }
+.center {
+	text-align: center;
+}
 .content {
 	margin-top: 5%;
 	margin-bottom: 5%;
