@@ -1,0 +1,101 @@
+//Your LESS file must AT LEAST include:
+// 50 LINES of LESS
+// two variables
+// one plain mixin
+// one parametric mixin with an option to input one or two variables
+// one guarded mixin
+
+// AT LEAST 50 LINES of LESS (More than 80 lines of less not including comments)
+// AT LEAST two variables (6 out of 6 total)
+@white: #FFFFFF;
+@black: #000000;
+@red: #FF1308;
+@blue: #0E99DA;
+@green: #93C700;
+@yellow: #FFFF00;
+// AT LEAST one plain mixin (1 out of 2 total)
+.bordered {
+  border-top: solid 2px @yellow;
+  border-bottom: solid 2px @yellow;
+}
+// AT LEAST one parametric mixin with an option to input one or two variables
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+// AT LEAST one guarded mixin (1 out of 2 total)
+.mixin (@default) when (lightness(@default) > 50%) {
+  color: @black;
+  background-color: @default;
+
+  #active {
+    color: @black;
+    background-color: @default;
+  }
+  button {
+    background-color: @black;
+    color: @default;
+    .rounded-corners(10px);
+  }  
+  a {
+      color: @default;
+  }
+  .navbar a:hover,.navbar a:active {
+    color: @black;
+    background-color: @default;
+  }  
+  nav, footer {
+    color: @default;  
+    background-color: @black;
+  }  
+  .content {
+    .bordered;
+  }  
+}
+// AT LEAST one guarded mixin (2 out of 2 total)
+.mixin (@default) when (lightness(@default) =< 50%) {
+  color: @white;
+  background-color: @default;
+
+  #active {
+    color: @white;
+    background-color: @default;
+  }
+  button {
+    background-color: @white;
+    color: @default;
+    .rounded-corners(10px);
+  }
+  a {
+      color: @default;
+  }
+  .navbar a:hover,.navbar a:active {
+    color: @white;
+    background-color: @default;
+  }  
+  nav, footer {
+    color: @default;  
+    background-color: @white;
+  }  
+  .content {
+    .bordered;
+  }  
+}
+.white_theme {
+	.mixin(@white)
+}
+.black_theme {
+	.mixin(@black)
+}
+.red_theme {
+	.mixin(@red)
+}
+.blue_theme {
+	.mixin(@blue)
+}
+.green_theme {
+	.mixin(@green)
+}

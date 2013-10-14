@@ -1,0 +1,48 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+nav,footer {
+	text-align: center;
+	font-weight:bold;
+}
+
+a {
+	text-align:center;
+	text-decoration:none;	
+}
+
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+
+.navbar, .content, .footer {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.navbar li {
+	float:left;
+}
+
+.navbar a:link,.navbar a:visited {
+	display:block;
+	width: 200px;
+	padding:10px;
+	text-transform:uppercase;
+}
+
+.content {
+	margin-top: 5%;
+	margin-bottom: 5%;
+	min-height: 500px;
+}
+
+.footer {
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
