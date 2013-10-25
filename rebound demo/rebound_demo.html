@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Rebound</title>
+    <style>
+        #playingArea{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            border: 1px solid black;
+            width: 500px;
+            height: 500px;
+            background-color: rgb(192,192,192);
+        }
+        #paddle{
+            position: absolute;
+            top: 470px;
+            left: 228px;
+            width: 64px;
+            height: 16px;
+        }
+        #ball{
+            position: absolute;
+            top: 4px;
+            left: 200px;
+            width: 16px;
+            height: 16px;
+        }
+        #score{
+            position: absolute;
+            top: 486px;
+            left: 0px;
+            width: 500px;
+            height: 14px;
+            font-size: 10pt;
+            color: white;
+            background-color: rgb(32,128,64);
+        }
+    </style>
+    <script language="JavaScript">
+    var ball;
+    var paddle;
+    var score;
+    var currentScore = 0;
+    var paddleLeft = 228;
+    var ballLeft = 200;
+    var ballTop = 4;
+    var timer;
+    var dx = 1;
+    var dy = 1;
+
+    function init() {
+    	ball = document.getElementById('ball');
+    	paddle = document.getElementById('paddle');
+    	score = document.getElementById('score');
+
+    	document.onkeydown = keyListener;
+
+    	start();
+
+    }
+
+    function keyListener(e) {
+    	if (!e) {
+    		e = window.event;
+    	}
+    	if (e.keyCode ==37 && paddleLeft > 0) {
+    		paddleLeft -= 10;
+    		paddle.style.left = paddleLeft + 'px';
+    	}
+    	if (e.keyCode ==39 && paddleLeft < 436) {
+    		paddleLeft += 10;
+    		paddle.style.left = paddleLeft + 'px';
+    	}
+
+    }
+
+    function start() {
+    	detectCollision();
+    	render();
+    	difficulty();
+
+    	if (ballTop < 470) {
+    		timer = setTimeout('start()', 20); //Every 50 milliseconds
+    	} else {
+    		gameOver();
+    	}
+    }
+	// here be dragons
+
+	function detectCollision() {
+		if(collisionX()) {
+			dx = dx * -1; //Bounding off the wall
+		}
+		if(collisionY()) {
+			dy = dy * -1;
+		}
+	}
+
+	function collisionX() {
+		if (ballLeft < 4 || ballLeft > 480) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	function collisionY() {
+		if (ballTop < 4) {
+			return true;
+		}
+		if (ballTop > 450) {
+			if(ballLeft > paddleLeft && ballLeft < paddleLeft + 64) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+
+	function render() {
+		moveBall();
+		updateScore();
+	}
+
+	function moveBall() {
+		ballLeft += dx;
+		ballTop += dy;
+		ball.style.left = ballLeft + 'px';
+		ball.style.top = ballTop + 'px';
+	}
+
+	function gameOver() {
+		clearTimeout(timer);
+		score.innerHTML += " Game Over";
+		score.style.backgroundColor = 'rgb(128, 0, 0)';
+	}
+	function updateScore() {
+		currentScore += 5;
+		score.innerHTML =  "Score: " + currentScore;
+	}
+
+	function difficulty() {
+		if (currentScore % 1000 == 0) {
+			if (dy > 0) {
+				dy += 3;			
+			} else {
+				dy -= 3;
+			}
+		}
+	}
+    </script>
+  
+</head>
+  <body onLoad="init()">
+  <h1>Rebound</h1>
+  <div id="playingArea">
+    <div id="paddle">
+        <img src="paddle.gif">
+    </div>
+    <div id="ball">
+        <img src="ball.gif">
+    </div>
+    <div id="score">
+        Score: 0
+    </div>
+  </div>
+</body>
+</html>
