@@ -1,0 +1,22 @@
+body {
+  padding-top: 5%;
+}
+
+.searchForm {
+	font-weight: bold;
+}
+
+#searchButton {
+	margin-top: 20px;
+}
+
+#searchFilter {
+	margin-top: 20px;
+}
+
+.business {
+	min-height: 150px;
+}
+.active {
+	font-weight: bold;
+}

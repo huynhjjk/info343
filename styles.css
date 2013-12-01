@@ -1,0 +1,156 @@
+/* Navigation Bar
+-------------------------------------------------- */
+
+.navbar-default .navbar-brand {
+	color: #fff200;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #fff200;
+}
+
+.navbar-default {
+	background-color: #2e3192;
+	font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: #fff200;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #000000;
+	background-color: #fff200;
+}
+
+/* Navigation Bar Mobile
+-------------------------------------------------- */
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #ffffff;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #2e3192;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #2e3192;
+}
+
+/*Buttons*/
+.btn-default {
+	color: #ffffff;
+	background-color: #2e3192;
+	font-weight: bold;
+}
+
+.btn-default:hover {
+	color: #fff200;
+	background-color: #2e3192;
+}
+
+/*Panel Header*/
+.panel-default > .panel-heading, .panel-title{
+	color: #ffffff;
+	background-color: #2e3192;	
+	font-weight: bold;
+}
+
+
+/* Tires Page with Media Queries
+-------------------------------------------------- */
+img {
+	width: 100%;
+}
+
+.filter {
+	padding-top: 6px;
+}
+
+#cost {
+	font-size: 30px;
+	width: 100%;
+}
+
+#tax {
+	color: #FF0000;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	#cost {
+		font-size: 30px;
+		width: 100%;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	#cost {
+		font-size: 22px;
+		width: 100%;
+	}
+}
+
+@media (min-width: 1200px) {
+	#cost {
+		font-size: 28px;
+		width: 100%;
+	}
+}
+
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  margin-top: 60px;	
+  color: #ffffff;
+  background-color: #2e3192;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+.footer_header {
+	color: #fff200;
+}
+
+#wrap > .container {
+  padding: 60px 15px 0;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding: 15px;
+}
+
+#footer > p{
+  color: #fff200;
+}
+
+code {
+  font-size: 80%;
+}
